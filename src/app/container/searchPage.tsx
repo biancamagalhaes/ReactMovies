@@ -63,6 +63,7 @@ function App(props) {
                 pathname: `/${element.id}`
               });
             }}
+            key={indx}
           >
             <SimpleCard
               title={element.original_title}
@@ -79,7 +80,7 @@ function App(props) {
         ))}
       </div>
       <Pagination
-        value={props?.movies.lenght}
+        value={props?.movies?.length}
         valuePerPage={5}
         onClick={(page: number) => {
           handlePagination(page);
